@@ -1,4 +1,5 @@
 -- create database tyrell_corp
+-- How to run: cat 2-create_db.sql | mysql -u root -p
 
 CREATE DATABASE IF NOT EXISTS tyrell_corp;
 USE tyrell_corp;

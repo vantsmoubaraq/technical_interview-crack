@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#Installs mysql version 5.7.*
+#Run on both servers
 sudo apt-key add signature.key
 sudo sh -c 'echo "deb http://repo.mysql.com/apt/ubuntu bionic mysql-5.7" >> /etc/apt/sources.list.d/mysql.list'
 sudo apt-get update

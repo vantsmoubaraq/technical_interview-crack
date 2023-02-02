@@ -1,4 +1,5 @@
 -- create database tyrell_corp
+-- To be run exclusively on master, web-01
 -- How to run: cat 2-create_db.sql | mysql -u root -p
 
 CREATE DATABASE IF NOT EXISTS tyrell_corp;

@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+#Run exclusively on replica server, web-02
 sed -i 's/bind-address  = 127.0.0.1/#&/' /etc/mysql/mysql.conf.d/mysqld.cnf
 echo "server-id	= 2" >> /etc/mysql/mysql.conf.d/mysqld.cnf
 echo "log_bin         = /var/log/mysql/mysql-bin.log" >> /etc/mysql/mysql.conf.d/mysqld.cnf

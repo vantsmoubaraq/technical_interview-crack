@@ -11,7 +11,7 @@ sed -i '$a\
 frontend loadbalancer\
         mode http\
         bind *:80\
-        bind *:443 ssl crt /etc/ssl/www.yourdomain.tech/www.yourdomain.tech.pem\
+        bind *:443 ssl crt /etc/ssl/www.yourdomain.tech/yourdomain.tech.pem\
         http-request redirect scheme https code 301 unless { ssl_fc }\
         default_backend webservers\
         http-request set-header X-Forwarded-Proto https if { ssl_fc }\
@@ -27,4 +27,3 @@ backend webservers\
 backend letsencrypt-backend\
         server letsencrypt 127.0.0.1:54321\
 	' /etc/haproxy/haproxy.cfg
-sudo service haproxy restart

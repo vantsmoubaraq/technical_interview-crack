@@ -1,1 +1,1 @@
-sudo sed -i '$a\\n    location /airbnb-onepage/ {\n        alias ~/AirBnB_clone_v2/;\n        proxy_pass http://0.0.0.0:5000;\n    }' /etc/nginx/sites-available/default
+sudo sed -i '/server_name _;/a \    location /airbnb-onepage/ {\n        alias ~/AirBnB_clone_v2/;\n        proxy_pass http://0.0.0.0:5000;\n    }' /etc/nginx/sites-available/default

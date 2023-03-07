@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+git clone https://github.com/username/AirBnB_clone_v2.git
+cd ~/AirBnB_clone_v2
+pip3 install Flask==2.1.0
+pip3 install gunicorn
+sudo apt install gunicorn
+sudo service datadog-agent stop
+sudo ufw allow 5000
+sed -i '11s/\//\/airbnb-onepage\//g' ~/AirBnB_clone_v2/web_flask/0-hello_route.py
+python3 -m web_flask.0-hello_route

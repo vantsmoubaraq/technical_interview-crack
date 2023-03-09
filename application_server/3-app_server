@@ -1,0 +1,4 @@
+sudo sed -i '/server_name _;/a \    location ~ ^/airbnb-dynamic/number_odd_or_even/(\d+)$ {\n        proxy_pass http://0.0.0.0:5001/number_odd_or_even/$1;\n    }' /etc/nginx/sites-available/default
+sudo service nginx restart
+cd ~/AirBnB_clone_v2
+gunicorn --bind 0.0.0.0:5000 web_flask.0-hello_route:app

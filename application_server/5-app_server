@@ -1,4 +1,9 @@
 #!/usr/bin/bash
 
 git clone https://github.com/username/AirBnB_clone_v4.git
+location / {
+                try_files $uri $uri/ =404;
+                proxy_pass http://0.0.0.0:5003/2-hbnb/;
+        }
 
+app = Flask(__name__, static_folder='static',static_url_path='/home/ubuntu/AirBnB_clone_v4/web_dynamic/static')

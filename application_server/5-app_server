@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+git clone https://github.com/username/AirBnB_clone_v4.git
+

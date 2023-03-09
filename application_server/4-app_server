@@ -1,0 +1,10 @@
+sudo sed -i '/server_name _;/a \    location /api/ {\n        proxy_pass http://0.0.0.0:5002;\n    }' /etc/nginx/sites-available/default
+sudo service nginx restart
+sudo apt-get install python3-dev
+sudo apt-get install libmysqlclient-dev
+sudo apt-get install zlib1g-dev
+sudo pip3 install mysqlclient
+sudo pip3 install SQLAlchemy
+pip3 install Flask-Cors
+cd ~/AirBnB_clone_v2
+gunicorn --bind 0.0.0.0:5002 api.v1.app:app

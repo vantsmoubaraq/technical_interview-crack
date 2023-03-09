@@ -1,0 +1,4 @@
+vi /etc/systemd/system/gunicorn.service
+sudo systemctl daemon-reload
+sudo systemctl enable gunicorn.service
+sudo systemctl start gunicorn.service

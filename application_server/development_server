@@ -1,6 +1,10 @@
 #!/usr/bin/bash
+
+#substitute username for your github username if you own the AirBnB_clone_v2 otherwise put your patner's username for that project
 git clone https://github.com/username/AirBnB_clone_v2.git
+
 cd ~/AirBnB_clone_v2
+sudo apt-get install python3-pip
 pip3 install Flask==2.1.0
 pip3 install gunicorn
 sudo apt install gunicorn
